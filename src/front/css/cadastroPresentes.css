@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Forum', serif;
+	color: #111111;
+	transition: .3s;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333333;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	color: #333333;
+}
+
+#picture__input {
+	display: none;
+}
+
+/* Cabeçalho - Título e botões */
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.picture {
+	width: 400px;
+	aspect-ratio: 32/18;
+	background: #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #aaa;
+	border: 2px;
+	cursor: pointer;
+	font-family: sans-serif;
+	transition: color 300ms ease-in-out, background 300ms ease-in-out;
+	outline: none;
+	overflow: hidden;
+}
+
+.picture:hover {
+	color: #777;
+	background: #ccc;
+}
+
+.picture:active {
+	border-color: turquoise;
+	color: turquoise;
+	background: #eee;
+}
+
+.picture:focus {
+	color: #777;
+	background: #ccc;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+	max-width: 100%;
+}
+
+input#descPresente{
+	width: 400px;
+}
+
+.gift-card {
+	padding: 0 !important;
+	position: relative; /* Para que o botão de deletar fique posicionado corretamente */
+}
+
+.btn-presentear {
+	border: none;
+	background-color: #5cb85c !important;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 8px 16px;
+	border-radius: 8px;
+	width: 100%;
+	margin: 0;
+}
+
+.btn-presentear:hover {
+	border: none;
+	background-color: #4FA24F !important;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 8px 16px;
+	border-radius: 8px;
+	width: 100%;
+	transform: scale(1.05);
+}
+
+.bi-bag {
+	margin-right: 8px;
+	color: #ffffff;
+}
+
+.card-body {
+	padding: 24px !important;
+	border: 1px solid #dddddd;
+	border-radius: 0 0 8px 8px !important;
+	margin-top: -1px;
+}
+
+.card-img-top {
+	object-fit: cover;
+	width: 100%;
+	height: 192px;
+	border: 1px solid #dddddd;
+	border-radius: 8px 8px 0 0 !important;
+}
+
+
+
+.btn-deletar {
+    border: none;
+    background-color: transparent;
+    color: red;
+	font-size: 32px;
+	margin-bottom: -3px;
+	padding: 0;
+	margin-left: 1px;
+}
+
+.btn-delete-wrapper {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+    top: 10px;
+    right: 12px;
+	background-color: #ffffff;
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn-delete-wrapper:hover {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+    top: 10px;
+    right: 12px;
+	background-color: red;
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+	.btn-deletar {
+		border: none;
+		background-color: transparent;
+		color: #fff;
+		font-size: 32px;
+		margin-bottom: -4px;
+	}
+}
+
+.card-title {
+	font-size: 24px;
+	/* font-weight: 600; */
+}
+
+#gift-description {
+	font-size: 18px;
+	font-style: italic;
+	margin: 8px 0 8px 0;
+	color: #666666;
+}
+
+.card-price {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #5cb85c ;
+}
+
+.card-wrapper {
+	padding: 8px !important;
+}
+
+.already-gifted {	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 0, 0, 0.7); /* Cor de fundo com transparência */
+	color: #fff; /* Cor do texto */
+	padding: 5px; /* Espaçamento interno */
+}
+
+.disabled {
+	display: none;
+}
+

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+h1{
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+h2{
+    color: #494949;
+    font-family: Inria Serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3 {
+    color: #494949;
+    font-family: Inria Serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+p {
+    font-family: Forum;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#666666;
+}
+
+footer {
+    background-color: #f0edea;
+    width: 100%;
+}
+
+footer h2 {
+    color: #CD7B63;
+    font-family: Inria Serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(73, 73, 73, 0.70);
+    font-family: Inria Serif;
+}
+
+header {
+    background-color: #f0edea;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0;
+    font-family: Inria Serif;
+    color: #494949;
+    font-weight: 500;
+}
+
+/* header button{
+    border-color: #CD7B63;
+    background-color: #CD7B63;
+    padding: 5px 12px;
+    margin-left: 20px;
+} */
+
+button {
+    border: none;
+    background-color: #CD7B63;
+    padding: 10px 24px;
+}
+
+.banner-text {
+    padding: 90px 128px 40px 20px;
+}
+
+.footer-row{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+footer .row {
+    margin: 0 !important;
+}
+
+.banner {
+    background-image: url('../assets/img/beautiful-wedding-chairs-wedding-dinner-table-dec-4BU9HQX\ 1.png'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+}
+.botoes {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: Forum;
+    text-align: center; 
+}
+
+/* .botao1{
+    border-color: #CD7B63;
+    background-color: #CD7B63;
+    padding: 10px 30px;
+    margin-right: 30px;
+    color: black;
+    font-family: Inria Serif;
+} */
+
+.botao2{
+    border-color: #DDDDDD;
+    background-color: transparent;
+    padding: 10px 50px;
+}
+
+.botao3{
+    border-color: #CD7B63;
+    background-color: #CD7B63;
+    padding: 10px 30px;
+    margin: 0px;
+    color: black;
+    font-family: Inria Serif;
+}
+
+.botao4{
+    border-color: #CD7B63;
+    background-color: #CD7B63;
+    padding: 10px 30px;
+    margin-right: 30px;
+    color: black;
+    font-family: Inria Serif;
+    font-size: 24px;
+}
+
+.nossos-casamentos{
+    background-color:#f0edea;
+    padding: 40px 30px;
+}
+
+.feedback-casais{
+    background-color: #FEFBF4;
+    padding: 40px 30px;
+}
+
+.direitos {
+    background-color: #FEFBF4;;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #464646;
+    font-family: Inria Serif;
+    height: 56px;
+}
+
+/* .bi {
+    font-size: 32px;
+} */
+
+.direitos-register {
+    background-color: #f0edea;;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #464646;
+    font-family: Inria Serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-body {
+    /* height: 384px; */
+    border-radius: 8px;
+}
+
+.dropdown-bg{
+    background-color:#f0edea ;
+}
+
+.logo-register{
+    background-color: #f0edea;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0;
+}
+
+.img-register {
+    background-image: url('../assets/img/login_photo.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 80px;
+    height: 88vh;
+}
+
+.register-img-text{
+    color: white;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 32px;
+}
+
+.register-body{
+    background-color: #fff;
+    padding-left: 24%;
+    padding-right: 24%;
+    margin: 0;
+    height: 80%;
+}
+
+.card-header {
+    background-color: transparent;
+}
+
+.card {
+    height: 12rem;
+    padding: 32px;
+    background-color: #FEFBF4;
+}
+
+body {
+    background-color: #fff !important;
+}
+
+.faca-login{
+    color: #CD7B63;
+}
+
+.info-register{
+
+    background-color: #fff;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.a-none{
+    text-decoration: none;
+    color: rgba(73, 73, 73, 0.70);
+    font-family: Inria Serif;
+}
+
+.cadastro-de-casamento{
+    background-color: #FEFBF4;
+}
+
+.home-meu-casamento{
+    background-color: #FEFBF4;
+    margin: 0px;
+}
+
+.icone {
+    font-size: 32px;
+    color: #CD7B63;
+}
+
+.card-title {
+    color: #CD7B63;
+}
+
+.dados-dos-casamentos{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FEFBF4;
+}
+
+.tarefa-info{
+    margin-right: 16px;
+}
+
+/* footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+} */
+
+html {
+    overflow-x: none;
+}
+
+main {
+    flex: 1;
+    background-color: #fff !important;
+}
+
+.bi-heart-fill {
+    color: #CD7B63;
+}
+
+body {
+    background-color: #fff !important;
+}
+
+html, body {
+    height: 100%; /* Garante que o HTML e o BODY ocupem toda a altura da tela */
+    margin: 0;    /* Remove as margens padrão */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+}
+
+.card-indicador {
+    height: 24rem;
+    padding: 32px;
+    background-color: #FEFBF4;
+}
+
+.card-feedback {
+    height: 480px;
+}

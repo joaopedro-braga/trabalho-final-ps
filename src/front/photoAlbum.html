@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Fotos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/newStyle.css">
+    <link rel="stylesheet" href="./css/photoAlbum.css">
+</head>
+
+<body class="cadastro-de-casamento">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main.html">
+                    <img src="./assets/img/logo.png" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobreNos.html">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nossosIndicadores.html">Nossos indicadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comentarioSite.html">Nos avalie</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Meu Casamento</a>
+                            <ul class="dropdown-menu dropdown-bg">
+                                <li><a class="dropdown-item dropdown-bg" href="registerGifts.html">Lista de presentes</a></li>
+                                <li><a class="dropdown-item dropdown-bg" href="confirmacaoDePresenca.html">Controle de convidados</a></li>
+                                <li><a class="dropdown-item dropdown-bg" href="orcamento.html">Orçamentos e contratos</a></li>
+                                <li><a class="dropdown-item dropdown-bg" href="agenda.html">Agenda</a></li>
+                                <li><a class="dropdown-item dropdown-bg" href="photoAlbum.html">Álbum de fotos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="suppliersList.html">Fornecedores</a>
+                        </li>
+                    </ul>
+                    <!-- <a href="register.html">
+                        <button>Entrar</button>
+                    </a> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row mb-4">
+            <div class="header-wrapper mb-2">
+                <h1 class="text-center">Fotos</h1>
+                <div class="btn-wrapper">
+                    <button class="botao3" type="button" id="btn-register" data-bs-toggle="modal"
+                    data-bs-target="#cadastroModal">Cadastrar</button>
+                </div>
+
+            </div>
+            <!-- Album de fotos -->
+            <div class="container">
+                <div class="row" id="imagesContainer">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal cadastrar Fotos -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="cadastroModalLabel">Cadastro de Imagens</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="imageForm">
+
+                        <!-- Campo Imagem -->
+                        <div>
+                            <!-- <label for="nome" class="form-label h-color text-center"></label> -->
+                            <input type="text" class="form-control mt-3 " id="image" name="image"
+                                placeholder="Link da imagem" required>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botao1" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="botao1" id="btn-create" data-bs-toggle="modal"
+                        data-bs-target="#cadastroModal">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row pb-4 footer-row">
+            <div class="col-lg-6 col-md-6 col-sm-12 ps-5">
+                <h2 class="text-start mt-5 mb-3">Vamos te ajudar!</h2>
+                <a href="registerGifts.html">Criar minha lista de presentes!</a><br>
+                <a href="confirmacaoDePresenca.html">Criar uma lista de convidados!</a><br>
+                <a href="orcamento.html">Registrar orçamentos!</a><br>
+                <a href="agenda.html">Gerencie seus compromissos!</a><br>
+                <a href="photoAlbum.html">Compartilhar fotos do meu casamento!</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 px-5">
+                <h2 class="text-start mt-5 mb-3">Contatos</h2>
+                <p><i class="bi bi-envelope me-2"></i>depoisdosim@gmail.com</p>
+                <p><i class="bi bi-telephone me-2"></i></i>(31) 999999-9999</p>
+            </div>
+        </div>
+        <div class="direitos">
+            <p class="text-center pt-3">© 2023 - 2023 Depois do Sim. Desenvolvido com muito <i
+                    class="bi bi-heart-fill"></i> na PUC Minas </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="./js/photoalbum.js"></script>
+</body>
+
+</html>
