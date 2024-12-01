@@ -1,0 +1,21 @@
+@startuml
+actor Noivo
+participant "Aplicação Web" as WebApp
+participant "API REST" as API
+participant "Serviço de Casamento" as CasamentoService
+participant "Repositório de Casamento" as CasamentoRepository
+database "Banco de Dados" as DB
+
+Noivo -> WebApp : Acessa formulário de cadastro
+WebApp -> Noivo : Exibe formulário
+Noivo -> WebApp : Preenche dados do casamento
+WebApp -> API : Envia dados do casamento (POST /wedding)
+API -> CasamentoService : Cria novo casamento
+CasamentoService -> CasamentoRepository : Salva casamento no banco de dados
+CasamentoRepository -> DB : Insere dados
+DB -> CasamentoRepository : Confirmação
+CasamentoRepository -> CasamentoService : Retorna casamento criado
+CasamentoService -> API : Retorna sucesso
+API -> WebApp : Retorna sucesso
+WebApp -> Noivo : Exibe confirmação
+@enduml

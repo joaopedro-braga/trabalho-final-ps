@@ -1,0 +1,29 @@
+@startuml
+actor Noivo
+participant "Aplicação Web" as WebApp
+participant "API REST" as API
+participant "Serviço de Convidado" as ConvidadoService
+participant "Repositório de Convidado" as ConvidadoRepository
+database "Banco de Dados" as DB
+
+Noivo -> WebApp : Acessa lista de convidados
+WebApp -> API : Solicita lista de convidados
+API -> ConvidadoService : Busca convidados do casamento
+ConvidadoService -> ConvidadoRepository : Busca convidados no DB
+ConvidadoRepository -> DB : Consulta convidados
+DB -> ConvidadoRepository : Retorna convidados
+ConvidadoRepository -> ConvidadoService : Retorna convidados
+ConvidadoService -> API : Retorna convidados
+API -> WebApp : Retorna convidados
+WebApp -> Noivo : Exibe lista de convidados
+Noivo -> WebApp : Preenche dados do convidado
+WebApp -> API : Envia novo convidado (POST /guest)
+API -> ConvidadoService : Adiciona novo convidado
+ConvidadoService -> ConvidadoRepository : Salva convidado no DB
+ConvidadoRepository -> DB : Insere convidado
+DB -> ConvidadoRepository : Confirmação
+ConvidadoRepository -> ConvidadoService : Retorna convidado criado
+ConvidadoService -> API : Retorna sucesso
+API -> WebApp : Retorna sucesso
+WebApp -> Noivo : Atualiza lista de convidados
+@enduml
