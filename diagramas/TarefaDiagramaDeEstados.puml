@@ -1,0 +1,30 @@
+@startuml
+hide empty description
+
+state Pendente #LightYellow {
+}
+
+state "Em Andamento" as EmAndamento #LightGreen {
+}
+
+state Concluída #LightBlue {
+}
+
+state Cancelada #LightCoral {
+}
+
+state Agendada #LightGray {
+}
+
+[*] --> Pendente : Criada
+
+Pendente --> Agendada : Agendada pelo noivo
+Agendada --> EmAndamento : Data/hora da tarefa atingida \n ou iniciada manualmente
+EmAndamento --> Concluída : Concluída pelo responsável
+Pendente --> Cancelada : Cancelada pelo noivo ou fornecedor
+Agendada --> Cancelada : Cancelada pelo noivo ou fornecedor
+EmAndamento --> Cancelada : Cancelada pelo noivo ou fornecedor
+Concluída --> [*] : Finalizada
+
+
+@enduml

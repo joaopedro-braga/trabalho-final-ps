@@ -1,0 +1,23 @@
+@startuml
+hide empty description
+
+state Planejado #LightYellow {
+}
+
+state "Em Andamento" as EmAndamento #LightGreen {
+}
+
+state Concluído #LightBlue {
+}
+
+state Cancelado #LightCoral {
+}
+
+[*] --> Planejado : Criado
+
+Planejado --> EmAndamento : Data do casamento atingida
+EmAndamento --> Concluído : Cerimônia e festa realizadas
+Planejado --> Cancelado : Cancelado pelo noivo
+EmAndamento --> Cancelado : Cancelado pelo noivo
+Concluído --> [*] : Finalizado
+@enduml

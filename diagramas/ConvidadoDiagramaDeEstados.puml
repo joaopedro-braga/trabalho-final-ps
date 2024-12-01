@@ -1,0 +1,25 @@
+@startuml
+hide empty description
+
+state Convidado #LightYellow {
+}
+
+state Confirmado #LightGreen {
+}
+
+state Recusado #LightCoral {
+}
+
+state "Aguardando Resposta" as AguardandoResposta #LightGray {
+}
+
+[*] --> Convidado : Convite enviado
+
+Convidado --> AguardandoResposta : Convite recebido
+AguardandoResposta --> Confirmado : Presença confirmada
+AguardandoResposta --> Recusado : Presença recusada
+Convidado --> Recusado : Convite recusado (sem resposta prévia)
+
+
+
+@enduml

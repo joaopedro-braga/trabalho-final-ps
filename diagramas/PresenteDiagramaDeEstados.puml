@@ -1,0 +1,25 @@
+@startuml
+hide empty description
+
+state Disponível #LightGreen {
+}
+
+state Reservado #LightYellow {
+}
+
+state Comprado #LightBlue {
+}
+
+state Indisponível #LightCoral {
+}
+
+[*] --> Disponível : Cadastrado
+
+Disponível --> Reservado : Reservado por convidado
+Reservado --> Comprado : Comprado pelo convidado
+Reservado --> Disponível : Reserva cancelada
+Comprado --> [*] : Finalizado
+Disponível --> Indisponível : Esgotado/Indisponibilizado pelos noivos
+Indisponível --> Disponível : Reposto/Disponibilizado pelos noivos
+
+@enduml
