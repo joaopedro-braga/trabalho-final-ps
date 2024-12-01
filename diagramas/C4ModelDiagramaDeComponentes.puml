@@ -1,0 +1,17 @@
+@startuml
+!include <c4/C4_Component>
+
+Container(api, "API REST (Back-end)", "Java Spring Boot") {
+  Component(controllers, "Controladores", "Java", "Recebe requisições HTTP e direciona para os serviços.")
+  Component(services, "Serviços", "Java", "Implementa a lógica de negócio.")
+  Component(repositories, "Repositórios", "Java", "Acesso ao banco de dados.")
+  Component(security, "Segurança", "Java", "Autenticação e autorização.")
+  Component(domain, "Domínio", "Java", "Classes de domínio (entidades).")
+
+  Rel(controllers, services, "Utiliza")
+  Rel(services, repositories, "Utiliza")
+  Rel(services, domain, "Utiliza")
+  Rel(controllers, security, "Utiliza")
+}
+
+@enduml

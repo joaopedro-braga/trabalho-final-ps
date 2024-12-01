@@ -1,0 +1,13 @@
+@startuml
+!include <c4/C4_Context>
+
+System_Boundary(c1, "Depois do Sim") {
+  Person(user, "Noivos", "Gerencia casamento, convidados, orçamento, presentes, etc.")
+  Person(supplier, "Fornecedores", "Gerencia serviços, responde cotações, recebe avaliações.")
+  Person(guest, "Convidados", "Confirma presença, visualiza presentes, acessa álbum de fotos.")
+
+  Rel(user, c1, "Interage", "HTTPS")
+  Rel(supplier, c1, "Interage", "HTTPS")
+  Rel(guest, c1, "Interage", "HTTPS")
+}
+@enduml

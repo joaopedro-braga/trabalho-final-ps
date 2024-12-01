@@ -1,0 +1,16 @@
+@startuml
+!include <c4/C4_Container>
+
+System_Boundary(c1, "Depois do Sim") {
+  Container(web_app, "Aplicação Web (Front-end)", "HTML, CSS, JavaScript", "Apresenta a interface para o usuário.")
+  ContainerDb(database, "Banco de Dados", "PostgreSQL, MySQL, etc.", "Armazena os dados do sistema.")
+  Container(api, "API REST (Back-end)", "Java Spring Boot", "Fornece acesso aos dados e funcionalidades.")
+
+  Rel(user, web_app, "Interage", "HTTPS")
+  Rel(supplier, web_app, "Interage", "HTTPS")
+  Rel(guest, web_app, "Interage", "HTTPS")
+  Rel(web_app, api, "Utiliza", "HTTPS")
+  Rel(api, database, "Le/Grava", "JDBC")
+
+}
+@enduml
