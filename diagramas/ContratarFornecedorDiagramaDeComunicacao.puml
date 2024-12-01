@@ -1,0 +1,32 @@
+@startuml
+actor "Noivo" as Noivo
+participant ":Aplicação Web" as WebApp
+participant ":API REST" as API
+participant ":Serviço de Fornecedor" as FornecedorService
+participant ":Repositório de Fornecedor" as FornecedorRepository
+participant ":Serviço de Tarefa" as TaskService
+participant ":Repositório de Tarefa" as TaskRepository
+participant ":Banco de Dados" as DB
+
+
+Noivo -> WebApp : 1 : Acessa a lista de fornecedores
+WebApp -> API : 2 : Solicita lista de fornecedores (GET /user/supplier/all)
+API --> WebApp : 3 : Retorna lista de fornecedores
+Noivo -> WebApp : 4 : Seleciona um fornecedor
+WebApp -> API : 5 : Solicita detalhes do fornecedor (GET /user/{supplierId})
+API --> WebApp : 6 : Retorna detalhes do fornecedor
+Noivo -> WebApp : 7 : Clica em "Contratar Fornecedor"
+WebApp -> Noivo : 8 : Exibe formulário de contratação (com dados do fornecedor)
+Noivo -> WebApp : 9 : Preenche detalhes da contratação (data, serviço, etc.)
+WebApp -> API : 10 : Envia dados da contratação (POST /task)
+API -> TaskService : 11 : Cria nova tarefa para o fornecedor
+TaskService -> TaskRepository : 12 : Salva a tarefa
+TaskRepository -> DB : 13 : Persiste dados da tarefa
+DB --> TaskRepository : 14 : Confirma persistência
+TaskRepository --> TaskService : 15 : Retorna tarefa criada
+TaskService --> API : 16 : Retorna sucesso
+API --> WebApp : 17 : Retorna sucesso
+WebApp -> Noivo : 18 : Exibe confirmação de contratação
+
+
+@enduml
