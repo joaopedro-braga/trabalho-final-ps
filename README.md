@@ -43,7 +43,7 @@ Este projeto tem como objetivo desenvolver um sistema de gerenciamento abrangent
 
 * **Back-end:** Java, Spring Boot, Spring Security, Spring Data JPA, JWT (JSON Web Token), MySQL, JavaMail (Brevo).
 * **Front-end:** HTML, CSS, JavaScript.
-* **Diagramas:** PlantUML, Figma (se aplicável).
+* **Diagramas:** PlantUML, Figma.
 
 
 ## Documentação
