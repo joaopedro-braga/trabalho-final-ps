@@ -48,7 +48,7 @@ Este projeto tem como objetivo desenvolver um sistema de gerenciamento abrangent
 
 ## Documentação
 
-A documentação completa do projeto pode ser encontrada aqui: [Link para o documento de documentação](DocumentacaoDoProjeto).
+A documentação completa do projeto pode ser encontrada aqui: [Link para o documento de documentação](Trabalho-Final.pdf).
 
 
 ## Diagramas
